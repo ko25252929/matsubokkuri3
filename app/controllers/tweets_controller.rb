@@ -1,5 +1,6 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:edit, :show]
+  before_action :authenticate_user!, only: [:create]
 
 
   def index
@@ -35,7 +36,7 @@ class TweetsController < ApplicationController
   def tweet_params
     params.require(:tweet).permit(:title, :text)
   end
-  
+
   def set_tweet
     @tweet = Tweet.find(params[:id])
   end
