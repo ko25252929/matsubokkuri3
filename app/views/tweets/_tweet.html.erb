@@ -1,23 +1,22 @@
-<div class="contents row">
-  <% @tweets.each do |tweet| %>
-    <div class="content_post">
+<div class="content_post" >
     <div class="more">
         <ul class="more_list">
           <li>
             <%= link_to '詳細', tweet_path(tweet.id), method: :get %>
           </li>
-        　 <li>
+          <% if user_signed_in? && current_user.id == tweet.user_id %>
+          <li>
             <%= link_to '編集', edit_tweet_path(tweet.id), method: :get %>
           </li>
           <li>
            <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
           </li>
+          <% end %>
         </ul>
       </div>
       <p><%= tweet.text %></p>
       <span class="name">
-        <%= tweet.title %>
+      <a href="/users/<%= tweet.user.id %>"> 
+         <span>キャンプサイト</span><%= tweet.title %>
       </span>
     </div>
-  <% end %>
-</div>

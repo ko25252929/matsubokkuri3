@@ -1,0 +1,5 @@
+<%= form_with(model: tweet, local: true) do |form| %>
+    <%= form.text_field :title, placeholder: "キャンプサイトの名前" %> 
+    <%= form.text_area :text, placeholder: "天候、芝の状態、風の強さをご記入下さい", rows: "10" %>
+    <%= form.submit "SEND" %>
+    <% end %>
