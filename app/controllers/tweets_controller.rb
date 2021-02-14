@@ -4,7 +4,7 @@ class TweetsController < ApplicationController
 
 
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -23,18 +23,23 @@ class TweetsController < ApplicationController
   def edit
   end
 
-
   def update
     tweet = Tweet.find(params[:id])
     tweet.update(tweet_params)
   end
 
   def show
+    @comment = Comment.new
+    @comments = @tweet.comments.includes(:user)
   end
 
-  private
+  def search
+    @tweets = Tweet.search(params[:keyword])
+  end
+
+ private
   def tweet_params
-    params.require(:tweet).permit(:title, :text)
+    params.require(:tweet).permit(:title, :iamge, :text).merge(user_id: current_user.id)
   end
 
   def set_tweet
