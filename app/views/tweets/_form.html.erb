@@ -1,5 +1,7 @@
 <%= form_with(model: tweet, local: true) do |form| %>
-    <%= form.text_field :title, placeholder: "キャンプサイトの名前" %> 
+    <%= form.datetime_field :day, placeholder: "日付" %> 
+    <%= form.text_field :title, placeholder: "キャンプ場名をご記入下さい" %> 
+    <%= form.file_field :image, placeholder: "画像" %> 
     <%= form.text_area :text, placeholder: "天候、芝の状態、風の強さをご記入下さい", rows: "10" %>
     <%= form.submit "SEND" %>
     <% end %>
