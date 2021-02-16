@@ -3,6 +3,8 @@
     <h2>新規登録画面</h2>
     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <%= devise_error_messages! %>
+      <%= link_to "Facebookで登録", user_facebook_omniauth_authorize_path, method: :post%>
+      <%= link_to "Googleで登録", user_google_oauth2_omniauth_authorize_path, method: :post%>
 
       <div class="field">
         <%= f.label :nickname %><br />
@@ -14,18 +16,22 @@
         <%= f.email_field :email %>
       </div>
 
+     <%if @sns_id.present? %>
+      <%= hidden_field_tag :sns_auth, true %>
+     <% else %>
       <div class="field">
         <%= f.label :password %>
-        <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
+        <% @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <br />
+        <%= f.password_field :password, autocomplete: "new-password" %>
       </div>
 
       <div class="field">
         <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
       </div>
+     <% end %>
 
       <div class="field">
         <%= f.label :ege %><br />
