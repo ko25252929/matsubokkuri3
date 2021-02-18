@@ -642,8 +642,8 @@ html {
 }
 
 body {
-  padding-top: 60px;
-}
+  padding-top: 150px;
+}/*検索とマツボックリの間が変わる*/
 
 h1,
 h2,
@@ -666,7 +666,7 @@ a {
 }
 
 a:hover {
-  color: #57C3E9;
+  color: #aaa;
 }
 
 .bold {
@@ -717,8 +717,8 @@ header.header div.header__bar.row div.grid-6 a.post {
 
 .btn:hover,
 header.header div.header__bar.row div.grid-6 a.post:hover {
-  border-color: #9bdbf2;
-  color: #9bdbf2;
+  border-color: #aaa;
+  color: #aaa;
 }
 
 .title {
