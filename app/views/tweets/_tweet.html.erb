@@ -1,4 +1,3 @@
-<% @tweets.each do |tweet| %>
        <li class="content_post">
        <%= image_tag tweet.image.variant(resize: '700x700'), class: 'tweet-image' if tweet.image.attached?%>
          <div class="more">
@@ -26,5 +25,4 @@
       </a>
       </span>
       </li>
-      <% end %>
     </div>

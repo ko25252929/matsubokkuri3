@@ -342,6 +342,7 @@ table {
   border-spacing: 0;
 }
 
+
 /* ==========================================================================
  * CSS SETTING
  * by Hiroaki WAKATSUKI
@@ -430,6 +431,9 @@ i {
   font-style: normal;
 }
 
+
+
+
 .animate {
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -452,13 +456,14 @@ i {
 }
 
 ul {
+  display:flex;
   margin: 0;
   padding: 0;
 }
 
 ul li {
   list-style: none;
-  padding: 0;
+  padding: 0 10px 0 0;
   margin: 0;
 }
 
@@ -642,7 +647,7 @@ html {
 }
 
 body {
-  padding-top: 150px;
+  padding-top: 60px;
 }/*検索とマツボックリの間が変わる*/
 
 h1,
@@ -868,6 +873,7 @@ div.contents.row div.content_post {
   background-position: center center;
   border-radius: 3px;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  text-align: center;
 }
 
 div.contents.row div.content_post:after {
@@ -898,6 +904,7 @@ div.contents.row div.content_post .more {
   height: 100px;
   width: 80px;
   text-align: right;
+  
 }
 
 div.contents.row div.content_post .more:hover ul.more_list {
@@ -915,7 +922,7 @@ div.contents.row div.content_post .more ul.more_list {
   display: none;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
-}
+}/*詳細ページの詳細などが出てくる*/
 
 div.contents.row div.content_post .more ul.more_list li {
   border-bottom: 1px solid #ddd;
