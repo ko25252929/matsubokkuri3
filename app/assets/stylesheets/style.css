@@ -6,6 +6,21 @@
  * ========================================================================== */
 /*
  * Correct `block` display not defined in IE 8/9. */
+ .more_list {
+  position: absolute;
+  display:flex;
+  margin: 0;
+  padding: 0;
+  left: 100px;
+  text-align: center;
+  
+}/*テキストを動かせる*/
+
+ul li {
+  list-style: none;
+  padding: 0 10px 0 0;
+  margin: 0 0 0 0;
+  } /*テキストを動かせる*/
 article,
 aside,
 details,
@@ -342,7 +357,6 @@ table {
   border-spacing: 0;
 }
 
-
 /* ==========================================================================
  * CSS SETTING
  * by Hiroaki WAKATSUKI
@@ -354,7 +368,9 @@ table {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
+  text-align: center;
+} /*tweet画像をセンターにできる*/
+
 
 img,
 object,
@@ -455,17 +471,7 @@ i {
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1%, rgba(0, 0, 0, 0.2) 100%);
 }
 
-ul {
-  display:flex;
-  margin: 0;
-  padding: 0;
-}
 
-ul li {
-  list-style: none;
-  padding: 0 10px 0 0;
-  margin: 0;
-}
 
 .row {
   width: 100%;
@@ -756,6 +762,7 @@ header.header div.header__bar.row {
   position: relative;
 }
 
+
 header.header div.header__bar.row h1.grid-6 {
   font-size: 30px;
   line-height: 41px;
@@ -990,7 +997,15 @@ div.contents.row .success h3 {
   margin: 10px auto;
 }
 
-form input,
+form input{
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
+  text-align: left;
+}/*formの変更日にち*/
 form textarea {
   width: 100%;
   margin: 5px 0 15px;
@@ -998,7 +1013,8 @@ form textarea {
   border: 1px solid #D8D8D8;
   border-radius: 5px;
   font-family: "游ゴシック", "YuGothic";
-}
+  text-align: left;
+}/*formの変更textarea*/
 
 form input[type="submit"] {
   background-color: #a0522d;
@@ -1006,7 +1022,8 @@ form input[type="submit"] {
   color: #fff;
   border: 0;
   font-size: 18px;
-}
+  text-align: center;
+}/*ボタンsubmitの変更*/
 
 form input[type="submit"]:hover {
   background-color: #a0522d;
