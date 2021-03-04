@@ -6,21 +6,18 @@
  * ========================================================================== */
 /*
  * Correct `block` display not defined in IE 8/9. */
- .more_list {
-  position: absolute;
-  display:flex;
-  margin: 0;
-  padding: 0;
-  left: 100px;
-  text-align: center;
-  
-}/*テキストを動かせる*/
+.showimg{
+  position: relative;
+  bottom: 29px;
+}/*詳細ページ画像*/
 
-ul li {
-  list-style: none;
-  padding: 0 10px 0 0;
-  margin: 0 0 0 0;
-  } /*テキストを動かせる*/
+.tento{
+  display: flex;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  right: 130px;
+}/*テント画像*/
 article,
 aside,
 details,
@@ -471,7 +468,18 @@ i {
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1%, rgba(0, 0, 0, 0.2) 100%);
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}/*テキストを動かせる*/
 
+ul li {
+  position: relative;
+  list-style: none;
+  padding: 0 10px 0 0;
+  margin: 0;
+} /*テキストを動かせる*/
 
 .row {
   width: 100%;
@@ -714,8 +722,12 @@ form input[type="submit"] {
   transition-timing-function: linear;
 }
 
-.btn,
+
 header.header div.header__bar.row div.grid-6 a.post {
+  position: relative;
+  bottom: 65px;
+  left: 100px;
+  margin: 10px 0 0 0;
   padding: 8px 20px;
   font-size: 14px;
   border: 2px solid #a0522d;
@@ -724,7 +736,33 @@ header.header div.header__bar.row div.grid-6 a.post {
   text-align: center;
   border-radius: 3px;
   display: inline-block;
-}
+}/*ログイン新規登録*/
+
+.push{
+  position: relative;
+  bottom: 55px;
+  left: 150px;
+  margin: 0 0 0 0;
+  padding: 11px 11px;
+  font-size: 15px;
+  border: 2px solid #a0522d;
+  color: #a0522d;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  display: inline-block;
+}/*投稿移動できる*/
+
+.btn{
+  padding: 8px 20px;
+  font-size: 14px;
+  border: 2px solid #a0522d;
+  color: #a0522d;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  display: inline-block;
+}/*投稿移動できる*/
 
 .btn:hover,
 header.header div.header__bar.row div.grid-6 a.post:hover {
@@ -755,7 +793,7 @@ header.header {
   left: 0;
   right: 0;
   z-index: 5;
-  height: 62px;
+  height: 90px;
 }
 
 header.header div.header__bar.row {
@@ -764,14 +802,17 @@ header.header div.header__bar.row {
 
 
 header.header div.header__bar.row h1.grid-6 {
-  font-size: 30px;
+  font-size: 45px;
   line-height: 41px;
   float: left;
 }
 
 header.header div.header__bar.row h1.grid-6 a {
   display: block;
-}
+  position: relative;
+  margin: 10px 0 0 0;
+  right: 200px;
+}/*matsubokkuri移動*/
 
 header.header div.header__bar.row div.grid-6 {
   float: right;
@@ -791,19 +832,21 @@ header.header .user_nav {
 }
 
 header.header .user_nav span {
-  top: 5px;
   display: block;
+  position: relative;
+  left: 80px;
   float: left;
-  margin-left: 30px;
-  width: 150px;
+ margin: 0 0 0 0px;
+  width: 200px;
   height: 50px;
   font-size: 1em;
   cursor: pointer;
   position: relative;
+  bottom:60px;
 }
 
 header.header .user_nav span:after {
-  content: '▼';
+  content: '';
   font-size: .7em;
   margin-left: -4px;
 }
@@ -1017,6 +1060,8 @@ form textarea {
 }/*formの変更textarea*/
 
 form input[type="submit"] {
+  position: relative;
+  left:5px;
   background-color: #a0522d;
   border-radius: 20px;
   color: #fff;
@@ -1075,7 +1120,6 @@ footer p {
 
 .search-form .search-input {
   width: 30%;
-  margin-right: 10px;
 }
 
 .search-form .search-btn {

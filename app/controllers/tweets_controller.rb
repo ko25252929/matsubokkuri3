@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :set_tweet, only: [:edit, :show]
+  before_action :set_tweet, only: [:edit, :show,]
   before_action :authenticate_user!, only: [:create]
 
 
@@ -12,7 +12,11 @@ class TweetsController < ApplicationController
   end
 
   def create
-    Tweet.create(tweet_params)
+    @tweet = Tweet.new(tweet_params)
+    if @tweet.save
+    else
+      render :new
+    end
   end
 
   def destroy

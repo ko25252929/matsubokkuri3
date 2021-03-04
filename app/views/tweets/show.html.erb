@@ -1,5 +1,6 @@
 <div class="contents row">
   <div class="content_post">
+  <div class="showimg"><%= image_tag @tweet.image.variant(resize: '700x700'), class: 'tweet-image' if @tweet.image.attached?%></div>
     <% if user_signed_in? && current_user.id == @tweet.user_id %>
     <div class="more">
       <ul class="more_list">

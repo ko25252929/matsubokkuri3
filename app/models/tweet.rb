@@ -6,6 +6,8 @@ class Tweet < ApplicationRecord
     with_options presence: true do
      validates :title
      validates :text
+     validates :image
+     validates :day
     end
     
   def self.search(search)
