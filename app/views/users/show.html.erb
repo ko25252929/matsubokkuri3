@@ -1,5 +1,5 @@
-<div class="contents row">
-  <p><%= @nickname %>キャンプサイト情報</p>
+ <div class="contents row">
+  <p class="nickname"><%= @nickname %>キャンプサイト情報</p>
   <% @tweets.each do |tweet| %>
     <%= render partial: "tweets/tweet", locals: { tweet: tweet } %>
   <% end %>
