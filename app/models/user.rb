@@ -7,7 +7,6 @@ class User < ApplicationRecord
 
   with_options presence: true do
    validates :nickname, length: { maximum: 10 }
-   validates :ege,format: { with: /\A[0-9]+\z/, message: '半角数字で入力して下さい' }
 
    VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
     validates :password, format: { with: VALID_PASSWORD_REGEX, message: 'は半角英数字混合それぞれ１文字以上含む必要があります' }

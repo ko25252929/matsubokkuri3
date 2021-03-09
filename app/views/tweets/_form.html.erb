@@ -1,4 +1,5 @@
 <%= form_with(model: tweet, local: true) do |form| %>
+    <%= render 'layouts/error_messages', model:  form.object %>
     <%= form.datetime_field :day, placeholder: "日付" %> 
     <%= form.text_field :title, placeholder: "キャンプ場名をご記入下さい" %> 
     <%= form.file_field :image, placeholder: "画像" %> 
