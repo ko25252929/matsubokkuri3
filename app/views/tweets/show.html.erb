@@ -1,6 +1,11 @@
+   <div class="bxslider">
+        <div class="bxslider_slider"><img src="/assets/coffee1.jpg" width="1500" height="400" title="" ></div>
+        <div class="bxslider_slider"><img src="/assets/coffee2.jpg" width="1500" height="400" title="" ></div>
+        <div class="bxslider_slider"><img src="/assets/coffee3.jpg" width="1500" height="400" title="" ></div>
+   </div>
 <div class="contents row">
   <div class="content_post">
-  <div class="showimg"><%= image_tag @tweet.image.variant(resize: '700x700'), class: 'tweet-image' if @tweet.image.attached?%></div>
+  <div class="showimg"><%= image_tag @tweet.image.variant(resize: '530x530'), class: 'tweet-image' if @tweet.image.attached?%></div>
     <% if user_signed_in? && current_user.id == @tweet.user_id %>
     <div class="more">
       <ul class="more_list">
@@ -16,6 +21,7 @@
     <p><%= @tweet.text %></p>
     <span class="name"><%= @tweet.title %>
     </span>
+   <span class="name_nickname"><%= "投稿者#{@tweet.user.nickname}" %> </span>
   </div>
   <div class="container">
     <% if user_signed_in? %>

@@ -9,8 +9,8 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+   
 
     <script>
       $(document).ready(function(){
@@ -24,9 +24,11 @@
   </head>
 
   <body>
+  
   <header class="header">
       <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">Matsubokkuri</a></h1>
+        <h1 class="grid-6">
+         <a href="/">Matsubokkuri</a></h1>
          <div class="tento"><img src="/assets/camp008.png"></div>
            <% if user_signed_in? %>
            <div class="user_nav grid-6">
@@ -47,11 +49,6 @@
       </div>
       </header>
 
-       <div class="bxslider">
-        <div class="bxslider_slider"><img src="/assets/coffee1.jpg" title="" ></div>
-        <div class="bxslider_slider"><img src="/assets/coffee2.jpg" title="" ></div>
-        <div class="bxslider_slider"><img src="/assets/coffee3.jpg" title="" ></div>
-       </div>
     <%= yield %>
     <footer>
       <p>

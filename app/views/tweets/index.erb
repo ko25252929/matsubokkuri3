@@ -1,3 +1,8 @@
+<div class="bxslider">
+        <div class="bxslider_slider"><img src="/assets/coffee1.jpg" width="1500" height="400" title="" ></div>
+        <div class="bxslider_slider"><img src="/assets/coffee2.jpg" width="1500" height="400" title="" ></div>
+        <div class="bxslider_slider"><img src="/assets/coffee3.jpg" width="1500" height="400" title="" ></div>
+       </div>
 <%= form_with(url: search_tweets_path, local: true, method: :get, class: "search-form") do |form| %>
   <%= form.text_field :keyword, placeholder: "キャンプ場名で検索する", class: "search-input" %>
   <%= form.submit "検索", class: "search-btn" %>

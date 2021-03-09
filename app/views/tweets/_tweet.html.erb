@@ -1,7 +1,7 @@
        <li class="content_post">
        <%= image_tag tweet.image.variant(resize: '600x600'), class: 'tweet-image' if tweet.image.attached?%>
-         <div class="more">
-        <ul class="more_list">
+         <div class="more_tweet">
+        <ul class="more_details">
           <li>
             <%= link_to '詳細', tweet_path(tweet.id), method: :get %>
           </li>
@@ -15,13 +15,11 @@
           <% end %>
         </ul>
       </div>
+      <%= tweet.title %><%= tweet.day %>
       <p><%= tweet.text %></p>
       <span class="name">
       <a href="/users/<%= tweet.user.id %>"> 
-         <span>キャンプ場</span><br>
-         <%= tweet.title %>
       </span>
-      <span></span><%= tweet.day %>
       </a>
       </span>
       </li>

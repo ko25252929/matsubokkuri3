@@ -6,9 +6,22 @@
  * ========================================================================== */
 /*
  * Correct `block` display not defined in IE 8/9. */
+
+
+
+.more_details  {
+position: relative;
+right: 250px;
+}/*トップページ詳細編集削除*/
+
+.toppage{
+  position: relative;
+  left:185px;
+  bottom: 35px;
+}
 .showimg{
   position: relative;
-  bottom: 29px;
+  bottom: 30px;
 }/*詳細ページ画像*/
 
 .tento{
@@ -1012,6 +1025,14 @@ div.contents.row div.content_post span.name {
   font-size: 13px;
 }
 
+.name_nickname{
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+  z-index: 2;
+  font-size: 13px;
+}
+
 div.contents.row div.content_post span.name a {
   display: block;
   color: #aaa;
@@ -1075,7 +1096,7 @@ form input[type="submit"]:hover {
 }
 
 .container {
-  margin: 20px 0;
+  margin: 50px 0 0 0;
   padding: 30px;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
   background-color: white;
