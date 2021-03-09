@@ -1052,7 +1052,7 @@ div.contents.row div.content_post span.name span {
 }
 
 div.contents.row .success {
-  margin: 20px 0;
+  margin: 40px 0 20px 0 ;
   padding: 30px;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
   background-color: white;
@@ -1065,8 +1065,9 @@ div.contents.row .success h3 {
 }
 
 form input{
+  position: relative;
   width: 100%;
-  margin: 5px 0 15px;
+  margin: 10px 0 15px;
   padding: 10px;
   border: 1px solid #D8D8D8;
   border-radius: 5px;
@@ -1139,7 +1140,8 @@ footer p {
 
 .search-form {
   text-align: center;
-  padding-top: 32px;
+  padding-top: 100px;
+  padding-bottom: 30px;
 }
 
 .search-form .search-input {
