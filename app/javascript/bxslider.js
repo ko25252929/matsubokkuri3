@@ -3,6 +3,5 @@ $(function(){
     mode: 'fade',
     captions: true,
     auto: true,
-    slideWidth: 2000,
   });
 });
