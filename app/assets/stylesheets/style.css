@@ -6,8 +6,26 @@
  * ========================================================================== */
 /*
  * Correct `block` display not defined in IE 8/9. */
+ .container {
+  text-align: center;
+  margin:30px auto;
+}
 
+#timer {
+    font-size: 20px;
+    border: 1px solid #ccc;
+    padding :10px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+}
+
+.btn {
+  width: 10%;
+}
  
+
 
 .nickname {
   margin-top: 100px;
