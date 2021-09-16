@@ -10,10 +10,6 @@
   text-align: center;
   margin:30px auto;
 }
-.content_post {
-  list-style: none;
-}
-
 
 #timer {
     font-size: 20px;
@@ -512,7 +508,6 @@ ul {
   margin: 0;
   padding: 0;
   text-align: center;
-  
 }/*テキストを動かせる*/
 
 ul li {
@@ -995,6 +990,7 @@ div.contents.row div.content_post .more {
   height: 100px;
   width: 80px;
   text-align: right;
+  
 }
 
 div.contents.row div.content_post .more:hover ul.more_list {
