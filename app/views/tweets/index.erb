@@ -10,5 +10,22 @@
 <div class="contents row">
   <% @tweets.each do |tweet| %>
 <%= render partial: "tweet", locals: { tweet: tweet } %>
+     <tr>
+       <td>
+        <% if current_user %>
+            <% if current_user.already_favorited? (tweet) %>
+              <%= link_to  tweet_favorites_path(tweet), method: :delete  do%>
+              <i class="fas fa-heart"></i>
+            <% end %> 
+               <%= tweet.favorites.count %>
+             <% else %>
+               <%= link_to tweet_favorites_path(tweet), method: :post do %>
+               <i class="far fa-heart"></i>
+             <% end %>
+               <%= tweet.favorites.count %>
+             <% end %>     
+         </td>
+       </tr>
+      <%end%>
   <% end %>
 </div>
