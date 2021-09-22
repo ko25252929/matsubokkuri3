@@ -802,7 +802,6 @@ header.header div.header__bar.row div.grid-6 a.post {
   font-weight: bold;
   text-align: center;
   border-radius: 3px;
-  display: inline-block;
 }/*投稿移動できる*/
 
 .btn:hover,
